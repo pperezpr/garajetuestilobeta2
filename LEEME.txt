@@ -1,0 +1,37 @@
+Garaje Tu Estilo · Diseña tu piso
+Sube TODO el contenido de esta carpeta a la raíz del repo garajetuestilobeta2 (reemplaza lo que haya).
+IMPORTANTE: arrastra las CARPETAS completas (autos/, modelos/, img/) a la página de "Upload files" de GitHub.
+Si usas "choose your files", GitHub no sube carpetas y los modelos 3D no aparecen.
+
+- index.html ............ el diseñador
+- autos/ ................ autos 3D (Audi e-tron GT, Nissan GT-R R34, Porsche 911 Turbo, Lamborghini Urus, Mercedes G63, Toyota Tacoma)
+- modelos/ .............. muebles y elevadores 3D (mesas de trabajo, sistema de gabinetes, caja de herramientas, tablillero, elevadores)
+- img/ .................. texturas de las losas, logo, fotos de instalaciones y miniaturas del catálogo (img/thumbs/)
+- sw.js, manifest.webmanifest, icon-192.png, icon-512.png ... app instalable y modo sin señal
+- google-sheets-leads.gs  script para guardar cada cotización en tu Google Sheets (no hace falta subirlo a GitHub)
+
+Prueba rápida después de subir: abre .../garajetuestilobeta2/modelos/tablillero.glb — si da 404, la carpeta no subió.
+
+COTIZACIONES A GOOGLE SHEETS (opcional, recomendado)
+Cada vez que un cliente toca "Enviar por WhatsApp" (o baja el PDF con su teléfono), queda una fila en tu hoja:
+nombre, teléfono, municipio, visita, medidas, losa, losas, estimado, autos/muebles y el enlace para abrir su diseño.
+Aunque el cliente no termine de enviar el WhatsApp, tú tienes sus datos para darle seguimiento.
+1. Crea una hoja en Google Sheets.
+2. Extensiones → Apps Script → pega todo google-sheets-leads.gs → Guardar.
+3. Implementar → Nueva implementación → Aplicación web. Ejecutar como: Yo. Acceso: Cualquier usuario. Implementar y aceptar permisos.
+4. Copia la URL que termina en /exec.
+5. En index.html cambia  leads: {sheetUrl:null}  por  leads: {sheetUrl:'LA_URL'}  y súbelo.
+Para recibir un email con cada cotización nueva, pon tu correo en AVISAR_A dentro del script.
+
+AJUSTES NUEVOS EN CONFIG (index.html)
+- prices.ledTube ........ precio por tubo LED instalado (null = "por confirmar")
+- prices.wallLogo ....... precio del logo 3D de pared por ancho: {24: , 36: , 48: }
+- deposit.url ........... tu enlace de pago (ATH Móvil Business, Stripe Payment Link). Aparece "Reservar mi fecha con depósito"
+- quoteValidDays ........ días que vale la cotización (sale en el PDF y en el WhatsApp)
+- quoteTerms ............ tus términos para el PDF (texto)
+- advisor.pin ........... PIN del Modo asesor (menú ⋮). null = apagado. advisor.maxPct = descuento máximo
+  Ojo: el PIN está dentro de la página. Frena a un curioso, no a alguien que sepa leer código.
+- lights.* .............. medidas de los tubos LED (17.5", marco, watts por tubo)
+- ceilings .............. alturas de techo que se ofrecen (8, 9, 10, 12 pies)
+
+Precios, analítica, horarios de visita y demás ajustes: busca "CONFIG" cerca del inicio de index.html.

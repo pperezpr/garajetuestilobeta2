@@ -1,0 +1,12 @@
+GARAJE TU ESTILO — Diseñador de piso para garaje
+Copyright (c) 2026 Pedro A. Pérez Alberty / Garaje Tu Estilo. Ponce, Puerto Rico.
+Todos los derechos reservados.
+
+Este software y su código fuente son propiedad de Garaje Tu Estilo.
+Queda prohibido copiar, modificar, redistribuir, publicar o usar este
+código, en todo o en parte, sin permiso escrito del propietario.
+
+Los modelos 3D incluidos se usan bajo sus licencias respectivas
+(Creative Commons Attribution / CC0 / Royalty Free / Sketchfab Standard);
+los créditos de autor se muestran dentro de la aplicación. Esta licencia
+NO cubre esos modelos, solo el código y el diseño de la aplicación.
