@@ -1,5 +1,5 @@
 // Garaje Tu Estilo: la página abre rápido y funciona con mala señal (por ejemplo, en casa del cliente).
-const CACHE = 'gte-prot-1795648095';
+const CACHE = 'gte-prot-1795648565';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './img/tex-flat.webp', './img/tex-solid.webp', './img/tex-regular.webp', './img/tex-regular-overlay.webp', './img/tex-solid-detail.webp', './img/logo.webp', './img/tile-regular.webp', './img/rampa-esquinero.webp', './img/rampa-pieza.webp'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
